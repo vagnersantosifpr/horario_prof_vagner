@@ -1,3 +1,5 @@
+
+
 /* Estilos Gerais */
 body {
     font-family: sans-serif;
@@ -235,4 +237,67 @@ td.time-label.night-label { /* Estilo opcional se quiser diferenciar noite */
      cursor: default;
      color: #616161;
 }
+
+
+
+/* ... (Estilos Gerais anteriores: body, etc.) ... */
+
+/* --- Bloco de Informações do Professor --- */
+.professor-info-container {
+    width: 100%;
+    max-width: 700px; /* Largura máxima do bloco de info */
+    margin: 20px auto 30px auto; /* Centraliza e adiciona espaço abaixo */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.professor-info {
+    display: flex; /* Alinha foto e texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 25px; /* Espaço entre a foto e os detalhes */
+}
+
+.professor-photo img {
+    display: block;
+    width: 120px; /* Largura da foto */
+    height: 120px; /* Altura da foto */
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border: 3px solid #00796b; /* Borda com cor do IFPR */
+}
+
+.professor-details {
+    flex-grow: 1; /* Permite que a área de detalhes ocupe o espaço restante */
+}
+
+.professor-name {
+    margin: 0 0 8px 0; /* Espaçamento abaixo do nome */
+    font-size: 1.6em; /* Tamanho do nome */
+    color: #004d40; /* Cor do título */
+    font-weight: bold;
+}
+
+.professor-title-campus {
+    margin: 0 0 12px 0; /* Espaçamento abaixo do título/campus */
+    font-size: 1em;
+    color: #333;
+}
+
+.professor-link a {
+    display: inline-block;
+    text-decoration: none;
+    color: #00796b; /* Cor do link */
+    font-weight: 500;
+    padding: 5px 0; /* Espaçamento interno vertical */
+    transition: color 0.2s ease;
+}
+
+.professor-link a:hover {
+    color: #004d40; /* Cor mais escura no hover */
+    text-decoration: underline;
+}
+
 
