@@ -260,6 +260,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Inicializa o Drag and Drop DEPOIS que o HTML foi gerado
         initializeDragDrop();
+
+        // <<< NOVO CÓDIGO AQUI >>>
+        // --- Adiciona Listener ao Botão Salvar ---
+        const saveButton = document.getElementById('saveButton');
+        if (saveButton) {
+            saveButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Previne qualquer comportamento padrão do botão
+
+                // Exibe a mensagem de alerta personalizada
+                alert("Você achou que seria tão fácil alterar o horário do Prof. Vagner?? Na na ni na não.. Você precisa se logar como Administrador para efetivar a alteração");
+
+                console.log("Tentativa de salvar bloqueada. Mensagem exibida."); // Log para o console do desenvolvedor
+            });
+            console.log("Listener do botão 'Salvar Alterações' configurado.");
+        } else {
+            console.error("Elemento do botão 'Salvar Alterações' (ID: saveButton) não encontrado no DOM.");
+        }
+         // <<< FIM DO NOVO CÓDIGO >>>
+
     }
 
     // --- Executa a Inicialização ---
