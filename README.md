@@ -36,7 +36,7 @@ A principal característica técnica é a separação clara entre a estrutura da
 
 ## Estrutura do Projeto
 <img src="https://raw.githubusercontent.com/vagnersantosifpr/horario_prof_vagner/main/estrutura%20do%20projeto.png" alt="Estrutura do projeto">
-A imagem será colocado posteriormente.
+
 
 
 
