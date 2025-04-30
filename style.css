@@ -254,16 +254,17 @@ td.time-label.night-label { /* Estilo opcional se quiser diferenciar noite */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+
 .professor-info {
     display: flex; /* Alinha foto e texto lado a lado */
     align-items: center; /* Centraliza verticalmente */
-    gap: 25px; /* Espaço entre a foto e os detalhes */
+    gap: 1px; /* Espaço entre a foto e os detalhes */
 }
 
 .professor-photo img {
     display: block;
-    width: 120px; /* Largura da foto */
-    height: 120px; /* Altura da foto */
+    width: 180px; /* Largura da foto */
+    height: 180px; /* Altura da foto */
     border-radius: 50%; /* Deixa a foto redonda */
     object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
     border: 3px solid #00796b; /* Borda com cor do IFPR */
@@ -271,6 +272,8 @@ td.time-label.night-label { /* Estilo opcional se quiser diferenciar noite */
 
 .professor-details {
     flex-grow: 1; /* Permite que a área de detalhes ocupe o espaço restante */
+    text-align: center; /* <<<< ADICIONE ESTA LINHA >>>> */
+
 }
 
 .professor-name {
@@ -281,7 +284,7 @@ td.time-label.night-label { /* Estilo opcional se quiser diferenciar noite */
 }
 
 .professor-title-campus {
-    margin: 0 0 12px 0; /* Espaçamento abaixo do título/campus */
+    margin: 0 0 8px 0; /* Espaçamento abaixo do título/campus */
     font-size: 1em;
     color: #333;
 }
