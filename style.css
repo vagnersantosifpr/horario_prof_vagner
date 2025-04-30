@@ -148,7 +148,7 @@ td.time-label.night-label { /* Estilo opcional se quiser diferenciar noite */
     border-radius: 4px;
     padding: 5px;
     margin: 1px; /* Margem mínima */
-    font-size: 0.8em; /* Reduzido para caber mais texto */
+    font-size: 1.3em; /* <<-- VALOR AUMENTADO */
     cursor: grab;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -160,9 +160,10 @@ td.time-label.night-label { /* Estilo opcional se quiser diferenciar noite */
     justify-content: center;
     position: relative;
     z-index: 1;
-    /* Cores base são definidas pelas classes específicas abaixo */
     border: 1px solid #aaa; /* Borda padrão suave */
 }
+
+
 .discipline-card:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 10;
