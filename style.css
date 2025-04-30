@@ -1,0 +1,238 @@
+/* Estilos Gerais */
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #004d40; /* Verde escuro IFPR */
+    margin-bottom: 5px;
+}
+p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
+/* Container Geral */
+.timetable-container {
+    width: 100%;
+    max-width: 1400px; /* Limita largura máxima para melhor leitura */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Seção de Horário (Reutilizando classe para Professor) */
+.turma-schedule {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding: 15px;
+    overflow-x: auto; /* Permite rolagem horizontal se a tabela interna for larga */
+}
+
+.turma-title { /* Reutilizando classe para Professor */
+    color: #004d40;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #00796b;
+    padding-bottom: 5px;
+}
+
+/* Tabela dentro de cada seção */
+.turma-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-width: 800px; /* Largura mínima */
+}
+
+/* Cabeçalho da Tabela (Dias) */
+.turma-schedule th {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.85em;
+    border: 1px solid #004d40;
+    white-space: nowrap;
+}
+.turma-schedule th.time-header-col {
+     background-color: #004d40; /* Cor diferente para header de horário */
+     width: 10%; /* Largura da coluna de horário */
+}
+
+
+/* Células da Tabela (Slots e Labels de Hora) */
+.turma-schedule td {
+    border: 1px solid #ddd;
+    padding: 2px; /* Espaço mínimo para o card */
+    vertical-align: top;
+    height: 75px; /* Altura da célula - ajuste se necessário */
+    text-align: center;
+    font-size: 0.8em;
+    position: relative; /* Para posicionamento */
+}
+
+/* Célula do Horário (Primeira coluna) */
+.turma-schedule td.time-label {
+    font-weight: bold;
+    background-color: #e0f2f1; /* Verde claro base */
+    vertical-align: middle;
+    text-align: center;
+    padding: 8px 5px;
+    font-size: 0.8em;
+    border-right: 2px solid #a5d6a7;
+}
+/* Rótulos de horário da tarde/noite */
+td.time-label.afternoon-label {
+    background-color: #c8e6c9; /* Verde um pouco mais escuro */
+    border-right: 2px solid #81c784;
+    font-size: 0.75em; /* Fonte menor */
+}
+td.time-label.night-label { /* Estilo opcional se quiser diferenciar noite */
+     background-color: #b2dfdb; /* Exemplo: Teal mais claro */
+     border-right: 2px solid #4db6ac;
+     font-size: 0.75em; /* Fonte menor */
+}
+
+/* --- Estilos de Slots por Período --- */
+.timetable-slot.afternoon-slot {
+     background-color: #e8f5e9; /* Fundo levemente diferente para tarde */
+}
+.timetable-slot.night-slot {
+     background-color: #e0f2f1; /* Fundo levemente diferente para noite (Ex: igual manhã) */
+}
+
+/* --- Estilos para Intervalos --- */
+.interval-separator td {
+    height: 15px;
+    padding: 2px;
+    border: none;
+    background-color: #eeeeee; /* Cinza claro */
+    color: #555;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 0.75em;
+    vertical-align: middle;
+}
+
+/* Estilo para Separador de Período Principal (opcional, se adicionar no JS) */
+.period-separator td {
+    height: 20px;
+    padding: 2px;
+    border: none;
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+
+/* --- Cards de Disciplina / Atividade --- */
+.discipline-card {
+    border-radius: 4px;
+    padding: 5px;
+    margin: 1px; /* Margem mínima */
+    font-size: 0.8em; /* Reduzido para caber mais texto */
+    cursor: grab;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    word-wrap: break-word;
+    min-height: 55px; /* Ajustar com base na altura da célula */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    /* Cores base são definidas pelas classes específicas abaixo */
+    border: 1px solid #aaa; /* Borda padrão suave */
+}
+.discipline-card:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* --- Cores por Área/Tipo de Atividade --- */
+
+/* Aulas Regulares (se aplicável a outros profs) */
+.discipline-card.lang { background-color: #ffecb3; border-color: #ffd54f; }
+.discipline-card.exact { background-color: #bbdefb; border-color: #64b5f6; }
+.discipline-card.nature { background-color: #c8e6c9; border-color: #81c784; }
+.discipline-card.human { background-color: #ffcdd2; border-color: #e57373; }
+.discipline-card.other { background-color: #f5f5f5; border-color: #e0e0e0; }
+
+/* Aulas de Informática (Prof. Vagner) */
+.discipline-card.info { background-color: #d1c4e9; border-color: #9575cd; } /* Base Roxo */
+.discipline-card.info1 { border-left: 4px solid #7e57c2; } /* Roxo */
+.discipline-card.info2 { border-left: 4px solid #5c6bc0; } /* Indigo */
+.discipline-card.info3 { border-left: 4px solid #42a5f5; } /* Azul */
+.discipline-card.info4 { border-left: 4px solid #26a69a; } /* Teal (se usado) */
+
+/* Atividades Administrativas/Núcleos (Prof. Vagner) */
+.discipline-card.activity.adm { background-color: #ffe0b2; border-color: #ffb74d; } /* Laranja claro */
+.discipline-card.activity.meeting { background-color: #ffccbc; border-left: 4px solid #ff8a65; } /* Laranja mais forte para reuniões */
+
+/* Pesquisa/Projetos (Prof. Vagner) */
+.discipline-card.research { background-color: #c5cae9; border-color: #7986cb; } /* Indigo claro */
+.discipline-card.research.project { border-left: 4px solid #5c6bc0; } /* Borda Indigo */
+
+/* Atividades de Ensino/Apoio (Prof. Vagner) */
+.discipline-card.activity.ensino { background-color: #b2dfdb; border-color: #4db6ac; } /* Teal claro */
+.discipline-card.activity.support { background-color: #dcedc8; border-color: #aed581; } /* Verde lima claro */
+.discipline-card.activity.self { background-color: #f0f4c3; border-color: #dce775; } /* Lima pálido */
+
+
+/* --- Estilos Drag and Drop --- */
+
+/* Estilo do Card enquanto está sendo arrastado */
+.discipline-card.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000; /* Garante que fique sobre tudo */
+}
+
+/* Estilo do Slot quando um card está sobre ele */
+.timetable-slot.drag-over {
+    background-color: #a5d6a7 !important; /* Verde claro para indicar drop válido (sobrescreve outros bgs) */
+    border-style: dashed;
+}
+
+/* --- Slots Vazios --- */
+.timetable-slot.empty-slot {
+    background-color: #fafafa; /* Manhã */
+}
+.timetable-slot.empty-afternoon {
+    background-color: #f1f8e9; /* Tarde */
+}
+.timetable-slot.empty-night {
+     background-color: #e8eaf6; /* Noite (Exemplo: Indigo muito claro) */
+}
+
+
+/* Placeholder para aulas movidas (se usado no futuro) */
+.discipline-card.moved-placeholder {
+     background-color: #e0e0e0;
+     border-color: #bdbdbd;
+     border-style: dashed;
+     opacity: 0.7;
+     font-size: 0.7em;
+     font-style: italic;
+     cursor: default;
+     color: #616161;
+}
+

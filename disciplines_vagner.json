@@ -1,0 +1,18 @@
+[
+    { "id": "inovacaoEmpr", "name": "Seção de Inovação e Empreendedorismo", "shortName": "Inovação/Empr.", "professorKey": "vagner_adm", "cssClass": "activity adm" },
+    { "id": "devRespOtim", "name": "Aula de Desenvolvimento Responsivo e Otimização", "shortName": "Dev Resp/Otim", "professorKey": "vagner_aula", "cssClass": "info info1" },
+    { "id": "devWebOO", "name": "Aula de Desenvolvimento WEB Orientado a Objetos", "shortName": "Dev Web OO", "professorKey": "vagner_aula", "cssClass": "info info2" },
+    { "id": "servNuvem", "name": "Aula de Serviços em nuvem", "shortName": "Serv. Nuvem", "professorKey": "vagner_aula", "cssClass": "info info2" },
+    { "id": "pesquisaConv", "name": "Projeto de Pesquisa - Convênio IFPR", "shortName": "Pesq. Convênio", "professorKey": "vagner_pesquisa", "cssClass": "research" },
+    { "id": "nit", "name": "Núcleo de Inovação Tecnológica", "shortName": "NIT", "professorKey": "vagner_adm", "cssClass": "activity adm" },
+    { "id": "icIfprBiopark", "name": "Prog. Iniciação Científica - IFPR e BioPark", "shortName": "IC IFPR/BioPark", "professorKey": "vagner_pesquisa", "cssClass": "research project" },
+    { "id": "prepAula", "name": "Preparação de Aula e manutenção de ensino", "shortName": "Prep. Aula", "professorKey": "vagner_ensino", "cssClass": "activity self" },
+    { "id": "fundInfo", "name": "Aula de Fundamentos de informática", "shortName": "Fund. Info", "professorKey": "vagner_aula", "cssClass": "info info3" },
+    { "id": "nucleosDiversos", "name": "NIT, IFTECH, IFAGROTECH, Robótica, etc.", "shortName": "Núcleos Div.", "professorKey": "vagner_adm", "cssClass": "activity adm meeting" },
+    { "id": "orientProjInt", "name": "Orientação de Projetos Integradores", "shortName": "Orient. P.I.", "professorKey": "vagner_ensino", "cssClass": "activity support" },
+    { "id": "atendAluno", "name": "Dependências, AEE e Atendimento ao Aluno", "shortName": "Atend. Aluno/AEE", "professorKey": "vagner_ensino", "cssClass": "activity support" },
+    { "id": "reunioesComiss", "name": "Reuniões de Comissão, Núcleo, CGPC, etc", "shortName": "Reuniões Com.", "professorKey": "vagner_adm", "cssClass": "activity meeting" },
+    { "id": "analiseScppd", "name": "Análise de processos SCPPD - Sob demanda", "shortName": "Análise SCPPD", "professorKey": "vagner_adm", "cssClass": "activity adm" }
+  ]
+
+  
